@@ -1,3 +1,6 @@
+// var Ipfs = require('ipfs')
+// var OrbitDB = require('orbit-db')
+
 class NewPiecePlease {
     constructor (Ipfs, OrbitDB) {
         this.Ipfs = Ipfs
@@ -46,4 +49,5 @@ class NewPiecePlease {
 
 // module.exports = NewPiecePlease
 
+// window.npp = module.exports = new NewPiecePlease(Ipfs, OrbitDB)
 window.npp = module.exports = new NewPiecePlease(window.Ipfs, window.OrbitDB)
