@@ -25,6 +25,7 @@ class NewPiecePlease {
         this.defaultOptions = {
             accessController: { write: [this.orbitdb.identity.id] }
         }
+        console.log('**id.id**', this.orbitdb.identity)
         const docStoreOptions = {
             ...this.defaultOptions,
             indexBy: 'hash'
