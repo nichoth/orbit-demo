@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "main": "node-index.js",
   "scripts": {
-    "start": "budo src/index.js:bundle.js --pushstate --dir=public --live --open -- -p esmify --debug",
+    "start": "budo src/index.js:bundle.js --ssl --cors --pushstate --dir=public --live --open -- -p esmify --debug",
     "build": "browserify -p esmify -t uglifyify --debug src/index.js > public/bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
