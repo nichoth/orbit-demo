@@ -1,6 +1,31 @@
 {
+  "name": "orbit-demo",
+  "description": "Trying orbitDB",
+  "version": "0.0.0",
+  "main": "node-index.js",
+  "scripts": {
+    "start": "budo src/index.js:bundle.js --pushstate --dir=public --live --open -- -p esmify --debug",
+    "build": "browserify -p esmify -t uglifyify --debug src/index.js > public/bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "ipfs": "^0.54.4",
     "orbit-db": "^0.26.1"
-  }
+  },
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "budo": "^11.6.4",
+    "esmify": "^2.1.1",
+    "uglifyify": "^5.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nichoth/orbit-demo.git"
+  },
+  "author": "Nick Thomas <nichoth@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nichoth/orbit-demo/issues"
+  },
+  "homepage": "https://github.com/nichoth/orbit-demo#readme"
 }
