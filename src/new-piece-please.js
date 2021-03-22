@@ -27,8 +27,23 @@ class NewPiecePlease {
             indexBy: 'hash'
         }
         this.pieces = await this.orbitdb.docstore('pieces', docStoreOptions)
+        await this.pieces.load()
         this.onready()
     }
+
+    async addNewPiece (hash, instrument = 'Piano') {
+        // const existingPiece = this.getPieceByHash(hash)
+        // if (existingPiece) {
+        //     // await this.updatePieceByHash(hash, instrument)
+        //     return
+        // }
+    
+        const cid = await this.pieces.put({ hash, instrument })
+        console.log('**cid', cid)
+        return cid
+    }
 }
+
+// module.exports = NewPiecePlease
 
 window.npp = module.exports = new NewPiecePlease(window.Ipfs, window.OrbitDB)
