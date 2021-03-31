@@ -37,6 +37,13 @@ async function main () {
         return await IPFS.create({
             pubsub: true,
             EXPERIMENTAL: { pubsub: true },
+            config: {
+                Addresses: {
+                    API: '/ip4/127.0.0.1/tcp/0',
+                    Swarm: ['/ip4/0.0.0.0/tcp/0'],
+                    Gateway: '/ip4/0.0.0.0/tcp/0'
+                },
+            },
             repo: "./path-for-js-ipfs-repo"
         })
     }
@@ -81,6 +88,13 @@ async function main () {
         const ipfs2_config = {
             repo: './ipfs2',
             pubsub: true,
+            config: {
+                Addresses: {
+                    API: '/ip4/127.0.0.1/tcp/0',
+                    Swarm: ['/ip4/0.0.0.0/tcp/0'],
+                    Gateway: '/ip4/0.0.0.0/tcp/0'
+                },
+            },
             EXPERIMENTAL: { pubsub: true },
             Bootstrap: [db.address.toString()]
         }
