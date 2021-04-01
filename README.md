@@ -32,4 +32,7 @@ Error: No resolver found for codec "undefined"
 * https://github.com/orbitdb/orbit-db-docstore
 
 
+## 3-30-2021
+----------------------------------------------------------
 
+https://github.com/orbitdb/orbit-db/issues/873
