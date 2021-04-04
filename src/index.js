@@ -159,7 +159,8 @@ async function main () {
             const result = db2.iterator({ limit: -1 })
                 .collect().map(ev => ev.payload.value)
 
-            console.log('**result**', result.join('\n'))
+            // console.log('**result**', result.join('\n'))
+            console.log('**result**', result)
         })
 
         // Start adding entries to the first database
